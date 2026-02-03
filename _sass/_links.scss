@@ -12,6 +12,15 @@ a.uline-special {
   border-bottom: 1px solid #ccc;
 }
 
+a.author-link {
+  color: #666;
+  text-decoration: none;
+}
+
+a.author-link:hover {
+  color: $link-hover-color;
+}
+
 a.uline:hover{
   border-bottom: 1px solid #ccc;
 }
