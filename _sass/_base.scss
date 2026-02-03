@@ -36,3 +36,27 @@ body {
 span#more {
 	display: none;
 }
+
+// Tighter spacing for publication tables
+table tbody tr {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+table tbody tr td {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  vertical-align: top;
+}
+
+// Reduce spacing in publication entries
+table tbody tr td h5 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+table tbody tr td p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
