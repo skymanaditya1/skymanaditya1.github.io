@@ -54,7 +54,10 @@ function readLess() {
 <h2>
   <a name="research">Publications</a>
 </h2>
-<br/>
+<p style="margin-top: 0.5em; margin-bottom: 1em;">
+  <a href="#" id="showSelected" onclick="togglePublications('selected'); return false;" class="pub-toggle active-toggle" style="text-decoration: none; font-size: 1.1em;">[Show Selected]</a>
+  <a href="#" id="showAll" onclick="togglePublications('all'); return false;" class="pub-toggle" style="text-decoration: none; font-size: 1.1em;">[Show All]</a>
+</p>
 
 <table width="100%" align="center" valign="middle" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
     <tbody>
@@ -193,7 +196,7 @@ function readLess() {
           </p>
         </td>
       </tr>
-      <tr>
+      <tr class="publication-all">
         <td width="30%">
           <div class="one" style="text-align:center;">
               <img src="images/projects/synergistic_case2023/teaser.png" style="max-height: 400px;">
@@ -420,7 +423,7 @@ function readLess() {
       </p>
     </td>
   </tr>
-  <tr>
+  <tr class="publication-all">
     <td width="30%">
       <div class="one" style="text-align:center;">
           <img src="images/projects/reed_slt2021/architecture.png" style="max-height: 400px;">
@@ -721,7 +724,57 @@ function readLess() {
       </p>
     </li>
   </ul>
-</div>  
+</div>
+
+<style>
+  .publication-all {
+    display: none;
+  }
+
+  .pub-toggle {
+    color: #0076df;
+    cursor: pointer;
+  }
+
+  .pub-toggle:hover {
+    opacity: 0.8;
+  }
+
+  .pub-toggle.active-toggle {
+    color: #999;
+    cursor: default;
+  }
+
+  .pub-toggle.active-toggle:hover {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  function togglePublications(view) {
+    var allPubs = document.querySelectorAll('.publication-all');
+    var showSelectedBtn = document.getElementById('showSelected');
+    var showAllBtn = document.getElementById('showAll');
+
+    if (view === 'all') {
+      // Show all publications
+      for (var i = 0; i < allPubs.length; i++) {
+        allPubs[i].style.display = 'table-row';
+      }
+      // Update button states
+      showAllBtn.classList.add('active-toggle');
+      showSelectedBtn.classList.remove('active-toggle');
+    } else {
+      // Show only selected publications (hide publication-all)
+      for (var i = 0; i < allPubs.length; i++) {
+        allPubs[i].style.display = 'none';
+      }
+      // Update button states
+      showSelectedBtn.classList.add('active-toggle');
+      showAllBtn.classList.remove('active-toggle');
+    }
+  }
+</script>
 
 <div hidden="hidden">
 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=HlPcyrzc7e8yFyrAN5zVRB4Q6oQOU5EwTtuv9SXJE7Y&cl=ffffff&w=a"></script>
