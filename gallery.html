@@ -1,13 +1,36 @@
 ---
 layout: default
-title: Gallery
+title: Robot Gallery
 permalink: /gallery/
 ---
 
-<div style="text-align: center; margin-top: 100px; margin-bottom: 100px;">
-  <h1 style="font-size: 2.5em; color: #333; margin-bottom: 20px;">Gallery</h1>
-  <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">Coming Soon</p>
-  <p style="font-size: 0.9em; color: #999;">
-    This page is currently under construction. Check back soon for updates!
-  </p>
+<div id="gallery" style="max-width: 1400px; margin: 0 auto;">
+  <h2>Robot Gallery</h2>
+  <p style="color: #666; font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;">Our <a href="https://lis.csail.mit.edu/" class="uline-special">lab</a> has a large collection of robots, and it's always so much fun to work with them.</p>
+
+  <div class="gallery-grid" style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; margin-bottom: 3rem; justify-content: flex-start;">
+
+    <div class="gallery-item" style="text-align: center; width: calc(50% - 0.75rem);">
+      <a href="{{ site.baseurl }}/images/gallery/adi-fr3.JPG" download="adi-fr3.JPG" style="cursor: pointer; display: block;">
+        <img src="{{ site.baseurl }}/images/gallery/adi-fr3.JPG" alt="Adi with the fr3 bimanual setup" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: block;">
+      </a>
+      <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Adi with the fr3 bimanual setup</p>
+    </div>
+
+    <div class="gallery-item" style="text-align: center; width: calc(50% - 0.75rem);">
+      <a href="{{ site.baseurl }}/images/gallery/adi-spot-cropped-2.jpg" download="adi-spot-cropped-2.jpg" style="cursor: pointer; display: block;">
+        <img src="{{ site.baseurl }}/images/gallery/adi-spot-cropped-2.jpg" alt="Adi with the good boy Spot" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: block;">
+      </a>
+      <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Adi with the good boy Spot</p>
+    </div>
+
+  </div>
 </div>
+
+<style>
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 0 0 100% !important;
+    }
+  }
+</style>
