@@ -16,6 +16,10 @@ google_tag_manager:
 # Bing services
 bing_verification:
 
+# Cloudflare Web Analytics
+# (privacy-first, cookieless beacon — leave blank to disable)
+cloudflare_analytics: "a50675258e914528a2e65876eefee363"
+
 # Optional features
 animated:             true
 show_related_posts:   false
